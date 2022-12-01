@@ -1,0 +1,44 @@
+rice=1000
+salt=20
+sugar=40
+toothpaste=40
+oil=150
+cname=input("Enter customer name:")
+cpno=input("Enter customer contact number:")
+cadd=input("Enter customer address:")
+rq=int(input("Enter no.of rice packets:"))
+saltq=int(input("Enter no.of salt packets:"))
+sugarq=int(input("Enter no.of sugar packets:"))
+oilq=int(input("Enter no.of oil packets:"))
+tq=int(input("Enter no.of toothpastes:"))
+bill=(rice*rq)+(salt*saltq)+(sugar*sugarq)+(oil*oilq)+(toothpaste*tq)
+print("Bill=",bill)       
+if bill>3000:
+       tax=10/100*bill
+       print("Tax=",tax)
+elif bill>2000:
+    tax=5/100*bill
+    print("Tax =",tax)
+elif bill>1000:
+    tax=3/100*bill
+    print("Tax =",tax)
+elif bill>500:
+    tax=2/100*bill
+    print("Tax =",tax)   
+else:
+    tax=100
+    print("Tax=",tax)
+cc=input("enter coupon code:")
+if bill>3000:
+    dis=10/100*bill
+    print("Discount=",dis)
+if bill>2000:
+    dis=6/100*bill
+    print("Discount=",dis)
+if bill>1000:
+    dis=4/100*bill
+    print("Discount=",dis)    
+else:
+    dis=0
+    print("discount=",dis)
+print("Total balance is",(bill+tax)-dis)    
